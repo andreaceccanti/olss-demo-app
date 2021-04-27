@@ -4,6 +4,7 @@ on:
   issues:
     types: 
       - opened
+
 jobs:
   add-olss-label:
     runs-on: ubuntu-latest
@@ -11,4 +12,5 @@ jobs:
     steps:
     - uses: Renato66/auto-label@v2
       with: 
-         default-labels: '["olss"]'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        default-labels: '["olss"]'
