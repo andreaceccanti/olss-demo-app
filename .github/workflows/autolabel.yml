@@ -1,0 +1,14 @@
+name: OLSS hands on: autolabel new issues
+
+on: 
+  issues:
+    types: 
+      - opened
+jobs:
+  add-olss-label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: Renato66/auto-label@v2
+      with: 
+         default-labels: '["olss"]'
